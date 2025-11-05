@@ -8,6 +8,7 @@ const connection = require('./data/db');
 const movieRouter = require('./routers/movieRouter');
 
 app.use(cors());
+app.use(express.json());
 app.use(express.static('public'));
 
 app.use('/movies', movieRouter);
